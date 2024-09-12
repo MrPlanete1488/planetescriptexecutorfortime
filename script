@@ -1,21 +1,24 @@
 local Planete = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
-local UICorner = Instance.new("UICorner")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
 local TextLabel_2 = Instance.new("TextLabel")
 local Source = Instance.new("TextBox")
-local UICorner_2 = Instance.new("UICorner")
+local UICorner = Instance.new("UICorner")
 local Execute = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local Clear = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local Link = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local Save = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
 local UICorner_6 = Instance.new("UICorner")
-local ImageLabel = Instance.new("ImageLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local Credits = Instance.new("TextLabel")
+local UICorner_7 = Instance.new("UICorner")
 
 Planete.Name = "Planete"
 Planete.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -33,10 +36,8 @@ Main.Size = UDim2.new(0, 542, 0, 243)
 UIListLayout.Parent = Main
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
-UICorner.Parent = Main
-
 Frame.Parent = Main
-Frame.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Size = UDim2.new(0, 537, 0, 237)
@@ -55,6 +56,9 @@ TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(52, 44, 111)), ColorSequenceKeypoint.new(0.07, Color3.fromRGB(54, 47, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(52, 44, 111))}
+UIGradient.Parent = TextLabel
+
 TextLabel_2.Parent = Frame
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
@@ -63,7 +67,7 @@ TextLabel_2.BorderSizePixel = 0
 TextLabel_2.Position = UDim2.new(0.788775623, 0, 0.843881845, 0)
 TextLabel_2.Size = UDim2.new(0, 113, 0, 37)
 TextLabel_2.Font = Enum.Font.Ubuntu
-TextLabel_2.Text = "Status:🟢"
+TextLabel_2.Text = "🟢"
 TextLabel_2.TextColor3 = Color3.fromRGB(90, 57, 255)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14.000
@@ -77,20 +81,20 @@ Source.BorderSizePixel = 0
 Source.Position = UDim2.new(0, 0, 0.15611814, 0)
 Source.Size = UDim2.new(0, 316, 0, 154)
 Source.ClearTextOnFocus = false
-Source.Font = Enum.Font.Michroma
-Source.Text = "print\"hello\" -- print here"
+Source.Font = Enum.Font.Arial
+Source.Text = "print\"YESSSS\" --press f9 to check print"
 Source.TextColor3 = Color3.fromRGB(90, 57, 255)
 Source.TextSize = 14.000
 Source.TextWrapped = true
 Source.TextXAlignment = Enum.TextXAlignment.Left
 Source.TextYAlignment = Enum.TextYAlignment.Top
 
-UICorner_2.Parent = Source
+UICorner.Parent = Source
 
 Execute.Name = "Execute"
 Execute.Parent = Frame
 Execute.BackgroundColor3 = Color3.fromRGB(133, 103, 255)
-Execute.BackgroundTransparency = 0.700
+Execute.BackgroundTransparency = 0.600
 Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Execute.BorderSizePixel = 0
 Execute.Position = UDim2.new(0.0428305417, 0, 0.843881845, 0)
@@ -102,7 +106,7 @@ Execute.TextScaled = true
 Execute.TextSize = 14.000
 Execute.TextWrapped = true
 
-UICorner_3.Parent = Execute
+UICorner_2.Parent = Execute
 
 Clear.Name = "Clear"
 Clear.Parent = Frame
@@ -119,7 +123,7 @@ Clear.TextScaled = true
 Clear.TextSize = 14.000
 Clear.TextWrapped = true
 
-UICorner_4.Parent = Clear
+UICorner_3.Parent = Clear
 
 Link.Name = "Link"
 Link.Parent = Frame
@@ -136,7 +140,7 @@ Link.TextScaled = true
 Link.TextSize = 14.000
 Link.TextWrapped = true
 
-UICorner_5.Parent = Link
+UICorner_4.Parent = Link
 
 Save.Name = "Save"
 Save.Parent = Frame
@@ -153,38 +157,52 @@ Save.TextScaled = true
 Save.TextSize = 14.000
 Save.TextWrapped = true
 
-UICorner_6.Parent = Save
+UICorner_5.Parent = Save
 
-ImageLabel.Parent = Frame
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.694599628, 0, 0, 0)
-ImageLabel.Size = UDim2.new(0, 41, 0, 37)
-ImageLabel.Image = "rbxassetid://12984883523"
+UICorner_6.Parent = Frame
 
-local function NVLX_fake_script() -- Main.LocalScript 
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(52, 44, 111)), ColorSequenceKeypoint.new(0.13, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.53, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(52, 44, 111))}
+UIGradient_2.Parent = Frame
+
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Credits.BorderSizePixel = 0
+Credits.Size = UDim2.new(0, 260, 0, 31)
+Credits.Font = Enum.Font.Arcade
+Credits.Text = "Credits:NetyIdei,Romaa1233,GoodFall"
+Credits.TextColor3 = Color3.fromRGB(119, 101, 255)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextStrokeColor3 = Color3.fromRGB(52, 44, 111)
+Credits.TextWrapped = true
+
+UICorner_7.Parent = Main
+
+
+local function JBDXB_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 	
 end
-coroutine.wrap(NVLX_fake_script)()
-local function APECJ_fake_script() -- Execute.LocalScript 
+coroutine.wrap(JBDXB_fake_script)()
+local function KUQQK_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(script.Parent.Parent.Source.Text)()
 	end)
 end
-coroutine.wrap(APECJ_fake_script)()
-local function RGBR_fake_script() -- Clear.LocalScript 
+coroutine.wrap(KUQQK_fake_script)()
+local function XIRJDGQ_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Source.Text = ''
 	end)
 end
-coroutine.wrap(RGBR_fake_script)()
+coroutine.wrap(XIRJDGQ_fake_script)()
